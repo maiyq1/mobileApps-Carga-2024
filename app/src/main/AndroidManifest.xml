@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProjectCarga"
         tools:targetApi="31">
         <activity
+            android:name=".SignupScreen"
+            android:exported="false" />
+        <activity
             android:name=".LoginScreen"
             android:exported="false" />
         <activity
