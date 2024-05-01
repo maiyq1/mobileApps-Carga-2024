@@ -1,6 +1,8 @@
 package com.example.projectcarga
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,10 +13,13 @@ class HomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home_page)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val btnProfileScreen : LinearLayout = findViewById(R.id.profileRedirect)
+        val btnPlannerScreen : LinearLayout = findViewById(R.id.plannerRedirect)
+
+        btnProfileScreen.setOnClickListener() {
+            val i = Intent(this, ProfileScreen::class.java)
+            startActivity(i)
         }
     }
 }

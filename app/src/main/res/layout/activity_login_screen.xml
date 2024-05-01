@@ -52,7 +52,8 @@
         android:backgroundTint="@color/principal"
         android:layout_marginBottom="250dp"
         app:strokeColor="#B81818"
-        android:text="LOGIN"/>
+        android:id="@+id/loginButtonNew"
+        android:text="LOGIN" />
 
     <LinearLayout
         android:orientation="horizontal"
