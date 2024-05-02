@@ -3,6 +3,7 @@ package com.example.projectcarga
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ class ProfileScreen : AppCompatActivity() {
 
         val btnHomeScreen : LinearLayout = findViewById(R.id.homeRedirect)
         val btnMainScreen : Button = findViewById(R.id.signOffButton)
+        val btnBackHome : ImageView = findViewById(R.id.backHomePage)
 
         btnHomeScreen.setOnClickListener() {
             val i = Intent(this, HomePage::class.java)
@@ -25,6 +27,11 @@ class ProfileScreen : AppCompatActivity() {
 
         btnMainScreen.setOnClickListener() {
             val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
+        }
+
+        btnBackHome.setOnClickListener() {
+            val i = Intent(this, HomePage::class.java)
             startActivity(i)
         }
     }
